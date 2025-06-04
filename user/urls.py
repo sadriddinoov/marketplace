@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (
-    signup, login, resend_otp_view, verify_otp, me,
+    signup, login, verify_otp, me,
     reset_password, update_password, update_user,
     create_address, list_addresses, update_address, delete_address
 )
@@ -9,7 +9,6 @@ urlpatterns = [
     # User
     path('signup/', signup, name='user-signup'),
     path('login/', login, name='user-login'),
-    path("resend_otp/", resend_otp_view, name="resend-otp"),
     path("verify-otp/", verify_otp, name="verify-otp"),
     path('me/', me, name='user-me'),
     path('reset-password/', reset_password, name='user-reset-password'),
